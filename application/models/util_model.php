@@ -432,7 +432,7 @@ class Util_model extends CI_Model {
 		// CG/BFGminer devices stats
 		} else {
 			$antNew = false;
-			if (isset($stats->stats[0]->STATS[0]) && ($stats->stats[0]->STATS[0]->Type == 'Antminer S9' || $stats->stats[0]->STATS[0]->Type == 'Antminer L3+' || $stats->stats[0]->STATS[0]->Type == 'Antminer D3')) $antNew = true;
+			if (isset($stats->stats[0]->STATS[0]) && isset($stats->stats[0]->STATS[0]) && ($stats->stats[0]->STATS[0]->Type == 'Antminer S9' || $stats->stats[0]->STATS[0]->Type == 'Antminer L3+' || $stats->stats[0]->STATS[0]->Type == 'Antminer D3')) $antNew = true;
 
 			if (isset($stats->devs[0]->DEVS)) {
 				foreach ($stats->devs[0]->DEVS as $device) {
